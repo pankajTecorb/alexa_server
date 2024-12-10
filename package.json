@@ -1,0 +1,23 @@
+{
+  "name": "amazon_echo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "ask-sdk-core": "^2.14.0",
+    "ask-sdk-express-adapter": "^2.14.0",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0",
+    "ngrok": "^5.0.0-beta.2",
+    "nodemon": "^3.1.7"
+  }
+}
