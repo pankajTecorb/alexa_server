@@ -27,6 +27,8 @@ async function callGeminiApi(prompt) {
     } catch (error) {
         console.error('Error calling Gemini API:', error.response?.data || error.message);
         return "Sorry, I couldn't process your request.";
+    }
+}
   
 
 // Alexa Skill Handlers
