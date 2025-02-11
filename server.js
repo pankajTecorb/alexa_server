@@ -35,7 +35,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Hi I am Tecorb Jarvis . You can ask me anything!';
+        const speakOutput = 'Hi ,I am Veera from tecorb technologies  working on development environment please ask me selected questions thanks';
         return handlerInput.responseBuilder.speak(speakOutput).reprompt(speakOutput).getResponse();
     }
 };
@@ -58,7 +58,7 @@ const NameIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NameIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'My Name is Jarvis from tecorb technologies and working on development mode please ask me selected questions thanks';
+        const speakOutput = 'My Name is Veera from tecorb technologies and working on development environment please ask me selected questions thanks';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
