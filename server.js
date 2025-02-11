@@ -13,21 +13,21 @@ const GEMINI_ENDPOINT = 'https://gemini.googleapis.com/v1/ask';
 async function callGeminiApi(prompt) {
     try {
         const response = await axios.post(
-            GEMINI_ENDPOINT,
-            { prompt }, // Request payload
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`,
             {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${GEMINI_API_KEY}`
-                }
+                "contents": [{
+                  "parts":[{"text":prompt }]
+                  }]
+                 },
+            {
+                headers: { 'Content-Type': 'application/json' }
             }
         );
-        return response.data.answer || "I'm not sure how to respond.";
+        return response.data.candidates?.[0]?.content || "I'm not sure how to respond.";
     } catch (error) {
         console.error('Error calling Gemini API:', error.response?.data || error.message);
         return "Sorry, I couldn't process your request.";
-    }
-}
+  
 
 // Alexa Skill Handlers
 const LaunchRequestHandler = {
