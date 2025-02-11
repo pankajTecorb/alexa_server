@@ -23,7 +23,8 @@ async function callGeminiApi(prompt) {
                 headers: { 'Content-Type': 'application/json' }
             }
         );
-        return response.data.candidates?.[0]?.content || "I'm not sure how to respond.";
+        //return response.data.candidates?.[0]?.content || "I'm not sure how to respond.";
+        return  response.data.candidates?.[0]?.content.parts[0].text || "I'm not sure how to respond.";
     } catch (error) {
         console.error('Error calling Gemini API:', error.response?.data || error.message);
         return "Sorry, I couldn't process your request.";
