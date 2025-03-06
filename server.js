@@ -17,7 +17,7 @@ const PORT = 3000;
 const GEMINI_API_KEY = 'AIzaSyBHjvHyJMrHOoHGPZxXcrPXauUfraB-Wr8'; 
 const GEMINI_ENDPOINT = 'https://gemini.googleapis.com/v1/ask';
 
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = "mongodb+srv://tecorb:U1mmSuwFNPZEHNlw@tecorb.juv3dbp.mongodb.net/alexa-skill?retryWrites=true&w=majority;
 
 //  ✅ Mongoose Connection
 mongoose.connect(MONGO_URI)
